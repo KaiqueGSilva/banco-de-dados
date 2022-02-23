@@ -63,7 +63,7 @@ quantidadeEmEstoque int(11),
 fornecedores_idfornecedor int(11)
 );
 
-create table tb compras_has_produtos(
+create table tbcompras_has_produtos(
 compras_idcompra int(11),
 produtos_idproduto int(11)
 );
@@ -123,6 +123,29 @@ valorServico decimal(8,2),
 tempoServico time
 );
 
+create table tbfuncionarios(
+idFuncionario int(100),
+nome varchar(100),
+cargo varchar(100),
+cpf varchar(100),
+endereco varchar(100),
+telefone varchar(11),
+email varchar(100),
+cargofuncionario_idCargo int(11)
+);
+
+create table tbcargofuncionario(
+idCargo int(11),
+cargo varchar(100),
+salario decimal (8,2)
+);
+
+create table tbfuncionarios_has_servicos
+funcionarios_idFuncionario int(11),
+servicos_idServico int(11)
+);
+
+
 
 --visualizando as tabelas do banco de dados
 
@@ -133,5 +156,15 @@ show tables;
 desc tbclientes;
 desc tbfornecedores;
 desc tbprodutos;
+desc tbcompras_has_produtos;
+desc tbcompras;
+desc tbclientes;
+desc tbsercicos_has_clientes;
+desc tbanimais;
+desc tbanimais_has_servicos;
+desc tbservicos;
+desc tbfuncionarios;
+desc tbcargofuncionario;
+desc tbfuncionarios_has_servicos;
 
 
